@@ -1,0 +1,479 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="color-scheme" content="only light">
+<style>:root,html,body{color-scheme:only light}</style>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="description" content="Sujith & Pratiksha Wedding Celebration — Monday, 21st December 2026, Ashirwad Celebration, Wardha" />
+  <title>Sujith &amp; Pratiksha — Wedding Celebration</title>
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.sujithwedspratiksha.in/" />
+  <meta property="og:title" content="Sujith & Pratiksha — Wedding Celebration" />
+  <meta property="og:description" content="Sujith & Pratiksha Wedding Celebration — Monday, 21st December 2026, Ashirwad Celebration, Wardha" />
+  <meta property="og:image" content="https://www.sujithwedspratiksha.in/custom-websites/sujith-weds-pratiksha/assets/og/OG_Sujith.jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Sujith & Pratiksha — Wedding Celebration" />
+  <meta name="twitter:description" content="Sujith & Pratiksha Wedding Celebration — Monday, 21st December 2026, Ashirwad Celebration, Wardha" />
+  <meta name="twitter:image" content="https://www.sujithwedspratiksha.in/custom-websites/sujith-weds-pratiksha/assets/og/OG_Sujith.jpeg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Pinyon+Script&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Great+Vibes&family=Jost:wght@200;300;400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/custom-websites/sujith-weds-pratiksha/style.css" />
+
+  <!-- Preload the poster image so the intro screen paints instantly.
+       (We intentionally DO NOT preload the MP4 here — letting the <video>
+       element manage its own buffering is faster and avoids a duplicate
+       download that competes with fonts, CSS and script.js.) -->
+  <link rel="preload" as="image"
+        href="/custom-websites/sujith-weds-pratiksha/assets/Intro/Intro_Poster.webp"
+        fetchpriority="high" />
+
+  <!-- script.js is small and required for tap handling: load it early
+       so it's parsed before the user can possibly tap. -->
+  <link rel="preload" as="script"
+        href="/custom-websites/sujith-weds-pratiksha/script.js" />
+  </head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════════════
+       INTRO SCREEN
+  ═══════════════════════════════════════════════════════ -->
+  <section
+    id="intro-screen"
+    class="intro-screen"
+    aria-label="Wedding intro screen"
+    role="button"
+    tabindex="0"
+    aria-label="Tap to begin the celebration"
+  >
+
+    <video
+      id="intro-video"
+      class="intro-video"
+      poster="/custom-websites/sujith-weds-pratiksha/assets/Intro/Intro_Poster.webp"
+      muted
+      playsinline
+      webkit-playsinline="true"
+      x5-playsinline="true"
+      disableRemotePlayback
+      preload="auto"
+      aria-hidden="true"
+    >
+      <!-- WebM first for browsers that support it (smaller file, faster start).
+           Safari ignores webm and falls through to mp4. -->
+      <source src="/custom-websites/sujith-weds-pratiksha/assets/Intro/Intro_Section.webm" type="video/webm" />
+      <source src="/custom-websites/sujith-weds-pratiksha/assets/Intro/intro_section.mp4"  type="video/mp4" />
+    </video>
+
+    <!-- Tap hint — fades in via pure CSS (no JS dependency). -->
+    <div id="intro-tap-hint" class="intro-tap-hint" aria-hidden="true">
+      <p class="intro-tap-label">Tap to Begin the</p>
+      <p class="intro-tap-label intro-tap-label--sub">Celebration</p>
+    </div>
+
+    <div class="intro-vignette" aria-hidden="true"></div>
+
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       MAIN CONTENT
+  ═══════════════════════════════════════════════════════ -->
+  <!-- White flash transition overlay -->
+  <div id="white-flash" class="white-flash" aria-hidden="true"></div>
+
+  <main id="main-content" class="main-content" aria-hidden="true">
+
+    <!-- ─── HERO ─── -->
+    <section id="hero" class="hero" aria-label="Sujith and Pratiksha Wedding">
+
+      <div class="hero-bg" aria-hidden="true">
+        <img src="/custom-websites/sujith-weds-pratiksha/assets/Hero/Hero_Background.webp" alt="" class="hero-bg-img" draggable="false" />
+        <div class="hero-bg-overlay"></div>
+      </div>
+
+      <!-- Birds canvas — sits above bg, below content -->
+      <canvas id="hero-birds" class="hero-birds" aria-hidden="true"></canvas>
+
+      <div class="hero-content" id="hero-content">
+
+        <p class="hero-eyebrow">The Wedding Celebration of</p>
+
+        <h1 class="hero-names">
+          <span class="hero-name">Sujith</span>
+          <span class="hero-ampersand" aria-hidden="true">&amp;</span>
+          <span class="hero-name">Pratiksha</span>
+        </h1>
+
+        <div class="hero-divider" aria-hidden="true">
+          <span class="hero-divider-line"></span>
+          <span class="hero-divider-diamond">◆</span>
+          <span class="hero-divider-line"></span>
+        </div>
+
+        <div class="hero-meta">
+          <p class="hero-date">21st December 2026</p>
+          <div class="hero-meta-divider" aria-hidden="true"></div>
+          <p class="hero-venue">Ashirwad Celebration, Wardha</p>
+        </div>
+
+        <a href="#invite" class="hero-scroll-cta" aria-label="Scroll to view invitation">
+          <span>Scroll to view invitation</span>
+          <div class="hero-scroll-arrow" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+
+    <!-- ─── INVITE SECTION ─── -->
+    <section id="invite" class="invite" aria-label="Wedding Invitation">
+
+      <div class="invite-bg" aria-hidden="true">
+        <img
+          src="/custom-websites/sujith-weds-pratiksha/assets/invite/Invite_Background.webp"
+          alt=""
+          class="invite-bg-img"
+          draggable="false"
+        />
+        <div class="invite-bg-overlay"></div>
+      </div>
+
+      <div class="invite-ornament invite-ornament--top" aria-hidden="true" data-invite-parallax="-0.06">
+        <img src="/custom-websites/sujith-weds-pratiksha/assets/invite/Invite_Top_Ornament.webp" alt="" class="invite-ornament-img" draggable="false" />
+      </div>
+
+      <div class="invite-ornament invite-ornament--bottom" aria-hidden="true" data-invite-parallax="0.06">
+        <img src="/custom-websites/sujith-weds-pratiksha/assets/invite/Invite_Bottom_Accent.webp" alt="" class="invite-ornament-img" draggable="false" />
+      </div>
+
+      <div class="invite-card">
+
+        <p class="invite-section-num" aria-hidden="true">02</p>
+
+        <div class="invite-rule invite-rule--open" aria-hidden="true">
+          <span class="invite-rule-line"></span>
+          <span class="invite-rule-motif">✦</span>
+          <span class="invite-rule-line"></span>
+        </div>
+
+        <div class="invite-block" data-invite-block>
+          <p class="invite-blessing-label">With the Blessings of Our Parents</p>
+        </div>
+
+        <div class="invite-block" data-invite-block>
+          <p class="invite-parent">Samuel John &amp;</p>
+          <p class="invite-parent">Alice Samuel</p>
+        </div>
+
+        <div class="invite-spacer-rule" aria-hidden="true">
+          <span class="invite-rule-line"></span>
+        </div>
+
+        <div class="invite-block" data-invite-block>
+          <p class="invite-prose">
+            Request the presence &amp; Blessings of friends and family<br />
+            on the auspicious occasion of<br />
+            the wedding of their son
+          </p>
+        </div>
+
+        <div class="invite-block invite-block--focal" data-invite-block>
+          <h2 class="invite-name invite-name--groom">Sujith</h2>
+        </div>
+
+        <div class="invite-block" data-invite-block>
+          <p class="invite-with">with</p>
+        </div>
+
+        <div class="invite-block invite-block--focal" data-invite-block>
+          <h2 class="invite-name invite-name--bride">Pratiksha</h2>
+        </div>
+
+        <div class="invite-rule invite-rule--mid" aria-hidden="true">
+          <span class="invite-rule-line"></span>
+          <span class="invite-rule-motif">✦</span>
+          <span class="invite-rule-line"></span>
+        </div>
+
+        <div class="invite-block" data-invite-block>
+          <p class="invite-lineage-label">Daughter of</p>
+          <p class="invite-lineage">Sanjay Bhagat &amp; Madhuri Bhagat</p>
+          <p class="invite-prose" style="margin-top:12px;">
+            Request the presence &amp; Blessings of friends and family<br />
+            on the auspicious occasion of the wedding of their daughter
+          </p>
+        </div>
+
+        <div class="invite-rule invite-rule--close" aria-hidden="true">
+          <span class="invite-rule-line"></span>
+          <span class="invite-rule-motif">✦</span>
+          <span class="invite-rule-line"></span>
+        </div>
+
+      </div><!-- /invite-card -->
+
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════
+         WEDDING WEEKEND EVENTS — Section 03
+    ═══════════════════════════════════════════════════════ -->
+    <section id="events" class="events" aria-label="Wedding Weekend Events">
+
+      <!-- Background -->
+      <div class="events-bg" aria-hidden="true">
+        <img
+          src="/custom-websites/sujith-weds-pratiksha/assets/Event/Event_bg.webp"
+          alt=""
+          class="events-bg-img"
+          draggable="false"
+          onerror="this.style.display='none'"
+        />
+        <div class="events-bg-overlay"></div>
+      </div>
+
+      <!-- Section heading -->
+      <header class="events-header" data-events-header>
+        <p class="events-section-num" aria-hidden="true">03</p>
+
+        <div class="events-title-rule" aria-hidden="true">
+          <span class="events-rule-line"></span>
+          <span class="events-rule-motif">✦</span>
+          <span class="events-rule-line"></span>
+        </div>
+
+        <h2 class="events-title">Wedding Weekend Events</h2>
+
+        <p class="events-subtitle">A celebration of love, unity and joy,<br aria-hidden="true" /> on this auspicious day</p>
+      </header>
+
+      <!-- Carousel wrapper -->
+      <div
+        class="events-carousel-wrap"
+        role="region"
+        aria-label="Wedding events carousel"
+        aria-roledescription="carousel"
+      >
+
+        <!-- Prev arrow -->
+        <button
+          class="events-arrow events-arrow--prev"
+          id="events-prev"
+          aria-label="Previous event"
+          type="button"
+        >
+          <span aria-hidden="true">&#8592;</span>
+        </button>
+
+        <!-- Track -->
+        <div class="events-track" id="events-track" aria-live="polite">
+
+          <!-- Cards are injected by JS from event data array -->
+
+        </div>
+
+        <!-- Next arrow -->
+        <button
+          class="events-arrow events-arrow--next"
+          id="events-next"
+          aria-label="Next event"
+          type="button"
+        >
+          <span aria-hidden="true">&#8594;</span>
+        </button>
+
+      </div>
+
+      <!-- Dot indicators -->
+      <div class="events-dots" id="events-dots" role="tablist" aria-label="Event navigation"></div>
+
+    </section>
+
+
+    
+
+    <!-- ─── BLESSINGS BY THE SHORE ─── -->
+    <section id="blessings" class="blessings" aria-label="With Love and Blessings">
+
+      <!-- Full-screen sunset background -->
+      <div class="blessings-bg" aria-hidden="true">
+        <img
+          src="/custom-websites/sujith-weds-pratiksha/assets/blessings/blessings-bg.webp"
+          alt=""
+          class="blessings-bg-img"
+          draggable="false"
+        />
+        <div class="blessings-vignette"></div>
+      </div>
+
+      <!-- Floating petals container — populated by JS -->
+      <div class="blessings-petals" id="blessings-petals" aria-hidden="true"></div>
+
+      <!-- Vellum card -->
+      <div class="blessings-card-wrap" id="blessings-card-wrap">
+
+        <div class="blessings-card" id="blessings-card">
+
+          <!-- Card background texture -->
+          <img
+            src="/custom-websites/sujith-weds-pratiksha/assets/blessings/blessings-card.webp"
+            alt=""
+            class="blessings-card-bg"
+            draggable="false"
+            aria-hidden="true"
+          />
+
+          <!-- Card content layer -->
+          <div class="blessings-card-content">
+
+            <p class="blessings-section-num" aria-hidden="true">04</p>
+
+            <div class="blessings-rule blessings-rule--top" aria-hidden="true">
+              <span class="blessings-rule-line"></span>
+              <span class="blessings-rule-motif">✦</span>
+              <span class="blessings-rule-line"></span>
+            </div>
+
+            <h2 class="blessings-heading" data-blessings-reveal>With Love &amp; Blessings</h2>
+            <p class="blessings-subtext" data-blessings-reveal>
+              Our families, with joy in their hearts,<br />
+              await your gracious presence.
+            </p>
+
+            <div class="blessings-rule blessings-rule--mid" aria-hidden="true" data-blessings-reveal>
+              <span class="blessings-rule-line"></span>
+              <span class="blessings-rule-motif">◆</span>
+              <span class="blessings-rule-line"></span>
+            </div>
+
+            <!-- Group 1 -->
+            <div class="blessings-group" data-blessings-reveal>
+              <p class="blessings-group-label">Groom's Parents</p>
+              <p class="blessings-group-names">
+                Samuel John &amp;<br />
+                Alice Samuel
+              </p>
+            </div>
+
+            <div class="blessings-inner-rule" aria-hidden="true" data-blessings-reveal>
+              <span class="blessings-inner-dot">· · ·</span>
+            </div>
+
+            <!-- Group 2 -->
+            <div class="blessings-group" data-blessings-reveal>
+              <p class="blessings-group-label">Bride's Parents</p>
+              <p class="blessings-group-names">
+                Sanjay Bhagat &amp;<br />
+                Madhuri Bhagat
+              </p>
+            </div>
+
+            <div class="blessings-inner-rule" aria-hidden="true" data-blessings-reveal>
+              <span class="blessings-inner-dot">· · ·</span>
+            </div>
+
+            <!-- Group 3 -->
+            <div class="blessings-group" data-blessings-reveal>
+              <p class="blessings-group-label">With Love &amp; Gratitude</p>
+              <p class="blessings-group-names">
+                The Samuel &amp; Bhagat Families<br />
+                Relatives and Friends
+              </p>
+            </div>
+
+            <div class="blessings-rule blessings-rule--close" aria-hidden="true" data-blessings-reveal>
+              <span class="blessings-rule-line"></span>
+              <span class="blessings-rule-motif">✦</span>
+              <span class="blessings-rule-line"></span>
+            </div>
+
+          </div><!-- /blessings-card-content -->
+        </div><!-- /blessings-card -->
+      </div><!-- /blessings-card-wrap -->
+
+      <!-- Closing footer — floats below the card, above the diyas -->
+      <div class="blessings-footer" data-blessings-reveal>
+        <p class="blessings-regards-label">Regards,</p>
+        <p class="blessings-regards-name">Samuel &amp; Bhagat Families</p>
+        <p class="blessings-closing-names">Sujith &amp; Pratiksha</p>
+        <p class="blessings-closing-date">21st December 2026</p>
+        <p class="blessings-closing-venue">Ashirwad Celebration, Wardha</p>
+      </div>
+
+    </section>
+
+
+    
+
+  </main>
+
+  <!-- ═══════════════════════════════════════════════════════
+       BACKGROUND MUSIC
+  ═══════════════════════════════════════════════════════ -->
+  <audio
+    id="bg-music"
+    src="/custom-websites/sujith-weds-pratiksha/assets/music/Tum_ho_toh.mp3"
+    loop
+    preload="auto"
+    aria-hidden="true"
+  ></audio>
+
+  <!-- Music Toggle Button — bottom right -->
+  <button
+    id="music-btn"
+    class="music-btn"
+    aria-label="Pause music"
+    title="Toggle music"
+    hidden
+  >
+    <!-- Vinyl / note icon — SVG inline for crisp rendering at any DPI -->
+    <span class="music-btn-icon music-btn-icon--playing" aria-hidden="true">
+      <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Outer ring -->
+        <circle cx="18" cy="18" r="16" stroke="currentColor" stroke-width="1.2" opacity="0.55"/>
+        <!-- Middle groove ring -->
+        <circle cx="18" cy="18" r="10" stroke="currentColor" stroke-width="0.8" opacity="0.35"/>
+        <!-- Centre label -->
+        <circle cx="18" cy="18" r="4.5" fill="currentColor" opacity="0.75"/>
+        <!-- Centre hole -->
+        <circle cx="18" cy="18" r="1.6" fill="none" stroke="var(--clr-charcoal)" stroke-width="1.2"/>
+        <!-- Musical note stem -->
+        <line x1="23" y1="9" x2="23" y2="16" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+        <!-- Note flag -->
+        <path d="M23 9 C26 10, 27 12.5, 25 14" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" fill="none"/>
+        <!-- Note head -->
+        <ellipse cx="21" cy="16.5" rx="2.2" ry="1.6" transform="rotate(-15 21 16.5)" fill="currentColor"/>
+      </svg>
+    </span>
+    <span class="music-btn-icon music-btn-icon--paused" aria-hidden="true">
+      <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Outer ring (slightly faded to indicate muted state) -->
+        <circle cx="18" cy="18" r="16" stroke="currentColor" stroke-width="1.2" opacity="0.3"/>
+        <!-- Middle groove ring -->
+        <circle cx="18" cy="18" r="10" stroke="currentColor" stroke-width="0.8" opacity="0.2"/>
+        <!-- Centre label -->
+        <circle cx="18" cy="18" r="4.5" fill="currentColor" opacity="0.35"/>
+        <!-- Centre hole -->
+        <circle cx="18" cy="18" r="1.6" fill="none" stroke="var(--clr-charcoal)" stroke-width="1.2"/>
+        <!-- Play triangle -->
+        <path d="M16 13.5 L16 22.5 L24 18 Z" fill="currentColor" opacity="0.9"/>
+      </svg>
+    </span>
+  </button>
+
+  <script src="/custom-websites/sujith-weds-pratiksha/script.js"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4edd5f8ec12a48cfa682ab8261b80a79","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4edd5f8ec12a48cfa682ab8261b80a79","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+
+  <footer style="text-align:center;padding:14px 0 10px;font-family:'Cinzel', serif;font-size:11px;letter-spacing:0.1em;color:rgba(196,164,107,0.7);">Sujith &amp; Pratiksha • 21 December 2026 • Ashirwad Celebration, Wardha</footer></body>
+</html>

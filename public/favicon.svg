@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <radialGradient id="navyBg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#14214d" />
+      <stop offset="100%" stop-color="#070c1a" />
+    </radialGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f7e7ce" />
+      <stop offset="50%" stop-color="#d4a547" />
+      <stop offset="100%" stop-color="#a06420" />
+    </linearGradient>
+  </defs>
+  <!-- Background circle -->
+  <circle cx="50" cy="50" r="48" fill="url(#navyBg)" stroke="url(#gold)" stroke-width="2" />
+  <circle cx="50" cy="50" r="44" fill="none" stroke="url(#gold)" stroke-width="0.8" stroke-dasharray="2 2" opacity="0.6" />
+  
+  <!-- S & P Monogram -->
+  <text x="50" y="58" font-family="'Playfair Display', Georgia, serif" font-size="28" font-weight="700" fill="url(#gold)" text-anchor="middle" letter-spacing="1">
+    S&amp;P
+  </text>
+  
+  <!-- Tiny Lotus Top Accent -->
+  <path d="M50 18 C50 18 53 23 53 25 C53 27 50 28 50 28 C50 28 47 27 47 25 C47 23 50 18 50 18 Z" fill="url(#gold)" opacity="0.8" />
+  <path d="M50 28 C50 28 55 25 56 24 C57 23 54 22 51 25" stroke="url(#gold)" stroke-width="0.8" fill="none" />
+  <path d="M50 28 C50 28 45 25 44 24 C43 23 46 22 49 25" stroke="url(#gold)" stroke-width="0.8" fill="none" />
+</svg>
+
