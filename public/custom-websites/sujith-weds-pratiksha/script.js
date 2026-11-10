@@ -478,16 +478,16 @@
       time:        '11:00 AM Onwards',
       venue:       'Ashirwad Celebration, Wardha',
       tag:         'A sacred beginning under the Dharma Chakra',
-      accent:      '#C4A46B',
-      clrTitle:    '#FFF0D3',
-      clrDateTime: '#FFF1C2',
-      clrVenue:    '#FFD580',
-      clrQuote:    '#FFF0D3',
-      clrQuoteFade:'rgba(20,22,20,0.45)',
-      bgImg:       '/custom-websites/sujith-weds-pratiksha/assets/Event/varmala-bg.webp',
+      accent:      '#8EADC1',
+      clrTitle:    '#1E2B37',
+      clrDateTime: '#3D5467',
+      clrVenue:    '#587E98',
+      clrQuote:    '#1E2B37',
+      clrQuoteFade:'rgba(251, 248, 243, 0.85)',
+      bgImg:       '/custom-websites/sujith-weds-pratiksha/assets/Hero/Hero_Background.png',
       coupleImg:   '/custom-websites/sujith-weds-pratiksha/assets/Event/varmala-couple.webp',
       coupleAlt:   'Sujith & Pratiksha Wedding Ceremony',
-      fallbackBg:  'linear-gradient(160deg, #1a2a40 0%, #0a1128 100%)',
+      fallbackBg:  'linear-gradient(160deg, #FBF8F3 0%, #EDE6D6 100%)',
       mapsHref:    'https://www.google.com/maps/search/?api=1&query=Ashirwad+Celebration+Wardha+Maharashtra+India'
     }
   ];
@@ -869,7 +869,7 @@
       ctx.save();
       ctx.translate(px, py);
       ctx.globalAlpha  = b.opacity;
-      ctx.strokeStyle  = 'rgba(22,16,8,0.90)';
+      ctx.strokeStyle  = 'rgba(30, 43, 55, 0.70)';
       ctx.lineWidth    = Math.max(0.85, sz * 0.17);
       ctx.lineCap      = 'round';
       ctx.lineJoin     = 'round';
@@ -897,7 +897,7 @@
       /* Tiny head nub so silhouette reads as a real bird */
       ctx.beginPath();
       ctx.arc(sz * 0.08, -sz * 0.08, sz * 0.09, 0, Math.PI * 2);
-      ctx.fillStyle = 'rgba(22,16,8,0.82)';
+      ctx.fillStyle = 'rgba(30, 43, 55, 0.65)';
       ctx.fill();
 
       ctx.restore();
