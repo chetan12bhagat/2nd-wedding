@@ -22,6 +22,7 @@ const FinalMessage: React.FC = () => {
     window.open(gCalUrl, '_blank');
   };
 
+
   return (
     <footer
       ref={ref}
