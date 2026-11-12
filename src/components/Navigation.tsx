@@ -56,7 +56,7 @@ const Navigation: React.FC<NavigationProps> = () => {
               <span className="font-display text-xs text-gold font-bold">J&P</span>
             </div>
             <span className="font-display text-sm tracking-wider text-ivory hidden sm:inline group-hover:text-gold transition-colors">
-              Jibby & Pratiksha
+              Jiby & Pratiksha
             </span>
           </a>
 

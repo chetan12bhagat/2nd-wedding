@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════════
-   JIBBY & PRATIKSHA — WEDDING WEBSITE
+   JIBY & PRATIKSHA — WEDDING WEBSITE
    script.js  ·  Vanilla JS  ·  No frameworks
 ═══════════════════════════════════════════════════════════════ */
 
@@ -486,7 +486,7 @@
       clrQuoteFade:'rgba(20,22,20,0.45)',
       bgImg:       '/custom-websites/sujith-weds-pratiksha/assets/Event/varmala-bg.webp',
       coupleImg:   '/custom-websites/sujith-weds-pratiksha/assets/Event/varmala-couple.webp',
-      coupleAlt:   'Jibby & Pratiksha Wedding Ceremony',
+      coupleAlt:   'Jiby & Pratiksha Wedding Ceremony',
       fallbackBg:  'linear-gradient(160deg, #1a2a40 0%, #0a1128 100%)',
       mapsHref:    'https://www.google.com/maps/search/?api=1&query=Ashirwad+Celebration+Wardha+Maharashtra+India'
     }
